@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!--==================== UNICONS ====================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
         
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="">
-        
-        <!--==================== CSS ====================-->
+        <!--==================== SWIPER CSS====================-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--==================== CSS ==========-->
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <title>Emily Holcomb Product | Strategy | UX | Analysis</title>
@@ -19,55 +19,59 @@
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav_logo">Emily</a>
+                <a href="#" class="nav__logo">Emily</a>
 
-                <div class="nav_menu" id="nav-menu">
-                    <ul class="nav_list grid">
-                        <li class="nav_item">
-                            <a href="#home" class="nav_link">
-                                <i class="uil uil-estate nav_icon"></i> Home
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="uil uil-estate nav__icon"></i> Home
                             </a>
                         </li>
-                        <li class="nav_item">
-                            <a href="#about" class="nav_link"> 
-                                <i class="uil uil-smile-beam nav_icon"></i> About
-                            </a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#strategy" class="nav_link">
-                                <i class="uil uil-crosshair nav_icon"></i> Strategy
 
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-smile-beam nav__icon"></i> About
                             </a>
                         </li>
-                        <li class="nav_item">
-                            <a href="#ux" class="nav_link">
-                                <i class="uil uil-palette nav_icon"></i> UX
-                            </a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#analysis" class="nav_link">
-                                <i class="uil uil-chart-pie nav_icon"></i> Analysis
-                            </a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#recommendations" class="nav_link">
-                                <i class="uil uil-comment-alt-lines nav_icon"></i> Recommendations
 
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-crosshair nav__icon"></i> Strategy
                             </a>
                         </li>
-                        <li class="nav_item">
-                            <a href="#contact" class="nav_link">
-                                <i class="uil uil-at nav_icon"></i> Contact
 
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">
+                                <i class="uil uil-palette nav__icon"></i> UX
                             </a>
                         </li>
+
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class="uil uil-chart-pie nav__icon"></i> Analysis
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-at nav__icon"></i> Contact
+                            </a>
+                        </li>
+
                     </ul>
-                    <i class="uil uil-times nav_close" id="nav-close"></i>
+                    
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
                 </div>
-                <div class="nav_btns">
-                    <div class="nav_toggle" id="nav-toggle">
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
                         <i class="uil uil-bars"></i>
                     </div>
+                </div>
             </nav>
         </header>
 
@@ -75,13 +79,24 @@
         <main class="main">
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
-                <div class="home_container container grid">
-                    <div class="home_content grid">
-                        <div class="home_social">
-                            <a href="https://www.linkedin.com/in/eholcomb/" target="_blank" class="home_social-icon"><i class="uil uil-linkedin"></i></a>
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/eholcomb" target="_blank" class="home__social-icon">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+    
+                            <a href="https://wa.link/lqgjue" target="_blank" class="home__social-icon">
+                                <i class="uil uil-whatsapp"></i>                        
+                            </a>
+    
+                           <!-- <a href="https://github.com/" target="_blank" class="home__social-icon">
+                                <i class="uil uil-github-alt"></i>                            
+                            </a> -->
                         </div>
-                        <div class="home_img">
-                            <svg class="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+                        <div class="home__img">
+                            <svg class="home__blob" viewBox="0 0 200 187">
                                 <mask id="mask0" mask-type="alpha">
                                     <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
                                     130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
@@ -93,24 +108,32 @@
                                     165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                                     129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                                     -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                    <image class="home_blob-img" x="2" y="0" href="assets/img/perfil.png"/>
+
+                                    <!--==================== 
+                                        Insert your image in the Img folder and Change your image |
+                                        Center your image with X: horizontal, Y: vertical 
+                                    ====================-->
+                                    <image class="home__blob-img" x="2" y="0" href="assets/img/perfil.png"/>
                                 </g>
                             </svg>
                         </div>
-                        <div class="home_data">
-                            <h1 class="home_title">Hi, I'm Emily</h1>
-                            <h3 class="home_subtitle">Digital product leader</h3>
-                            <p class="home_description">Multi-dimensional strategic innovator with a passion for crafted experiences</p>
+
+                        <div class="home__data">
+                            <h1 class="home__title">Hi, I'm Emily</h1>
+                            <h3 class="home__subtitle">Digital product leader</h3>
+                            <p class="home__description">Multi-dimensional strategic innovator with a passion for crafted experiences</p>
                             <a href="#contact" class="button button--flex">
-                                Get in touch<i class="uil uil-message button_icon"></i>
+                                Contact me <i class="uil uil-message button__icon"></i>
                             </a>
                         </div>
                     </div>
-                    <div class="home_scroll">
-                        <a href="#about" class="home_scroll-button button--flex">
-                            <i class="uil uil-mouse-alt home_scroll-mouse"></i>
-                            <span class="home_scroll-name">Scroll down</span>
-                            <i class="uil uil-arrow-down home_scroll-arrow"></i>
+
+                    
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-button button--flex">
+                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                            <span class="home__scroll-name">Scroll down</span>
+                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
                         </a>
                     </div>
                 </div>
@@ -118,55 +141,529 @@
 
             <!--==================== ABOUT ====================-->
             <section class="about section" id="about">
-                
-            </section>
+                <h2 class="section__title">About me</h2>
+                <span class="section__subtitle">Professional highlights</span>
 
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
+                <div class="about__container container grid">
+                    <img src="assets/img/about.jpg" alt="Portrait of Emily Holcomb" class="about__img">
 
-            </section>
+                    <div class="about__data">
+                        <p class="about__description">I specialize in data-driven product management with a focus in seamless digital experiences. I comprehend the technical, procedural, and cultural aspects of innovative solution creation. <br><br>My blend of learning, commitment, and strategic foresight underpins my path to success. I manage the balance between planning and imagination and from insights to creations.
+                        </p>
 
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
+                        <div class="about__info">
+                            <div>
+                                <span class="about__info-title">10+</span>
+                                <span class="about__info-name">Years <br> experience</span>
+                            </div>
 
-            </section>
+                            <div>
+                                <span class="about__info-title">20+</span>
+                                <span class="about__info-name">User <br> interfaces</span>
+                            </div>
 
-            <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-                
+                            <div>
+                                <span class="about__info-title">05+</span>
+                                <span class="about__info-name">Enterprise <br> organizations</span>
+                            </div>
+                        </div>
+
+                        <div class="about__buttons">
+                            <!--==================== Change your CV ====================-->
+                            <a download="" href="assets/pdf/Emily Holcomb Resume 2023.pdf" class="button button--flex">
+                                Download resume <i class="uil uil-download-alt button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!--==================== PORTFOLIO ====================-->
             <section class="portfolio section" id="portfolio">
-                
+                <h2 class="section__title">Case studies</h2>
+                <span class="section__subtitle">Showcasing my expertise</span>
+
+                <div class="portfolio__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--=============== PORTFOLIO 1 ===============-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/portfolio1.jpg" alt="" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Strategic execution</h3>
+                                <p class="portfolio__description">I'm a planner at heart. From inception to obsolescence, I have navigated the intricate journey of products, ensuring they launch, thrive, evolve, and adapt.</p>
+                                <a href="/portfolio.html" class="button button--flex button--small portfolio__button">
+                                    Browse strategy projects
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!--=============== PORTFOLIO 2 ===============-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/portfolio2.jpg" alt="" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">User experience</h3>
+                                <p class="portfolio__description">My career has been molded by a steadfast commitment to enhancing user experience. Crafting holistic experiences that serve every user, I harness design to weave stories of innovation.</p>
+                                <a href="/portfolio.html" class="button button--flex button--small portfolio__button">
+                                    Browse UX projects
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!--=============== PORTFOLIO 3 ===============-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Business analysis</h3>
+                                <p class="portfolio__description">Analysis is the backbone of effective decision-making. I masterfully uncover insights that drive precision and efficiency by diving into the intricacies of data and processes.</p>
+                                <a href="/portfolio.html" class="button button--flex button--small portfolio__button">
+                                    Browse analysis projects
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
             </section>
 
             <!--==================== PROJECT IN MIND ====================-->
-            <section class="project section">
-
-            </section>
+            <!--<section class="project section">
+                <div class="project__bg">
+                    <div class="project__container container grid">
+                        <div class="project__data">
+                            <h2 class="project__title">Looking for a PM consultant?</h2>
+                            <p class="project__description">I'd be happy to provide any insight I can! Currently considering new clients for short-term opportunities.</p>
+                            <a href="#" class="button button--flex button--white">
+                                Contact me
+                                <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+    
+                        <img src="assets/img/project.png" alt="" class="project__img">
+                    </div>
+                </div>
+            </section>-->
 
             <!--==================== TESTIMONIAL ====================-->
             <section class="testimonial section">
-                
+                <h2 class="section__title">Recommendations</h2>
+                <span class="section__subtitle">Feedback from my colleagues and clients</span>
+
+                <div class="testimonial__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--=============== TESTIMONIAL 1 ===============-->
+                        <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                    <!-- <img src="assets/img/testimonial1.jpg" alt="" class="testimonial__img">-->
+        
+                                    <div>
+                                        <h3 class="testimonial__name">David Conrad</h3>
+                                        <span class="testimonial__client">Director of Online Services</span>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div>
+                            </div>
+    
+                            <p class="testimonial__description">[Emily] is passionate about discovering what a customer needs and making sure she delivers value while meeting their objectives.
+                            </p>
+                        </div>
+    
+                        <!--=============== TESTIMONIAL 2 ===============-->
+                        <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                    <!-- <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__img">-->
+        
+                                    <div>
+                                        <h3 class="testimonial__name">Diane Walker</h3>
+                                        <span class="testimonial__client">Head of Digital Experience</span>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div>
+                            </div>
+    
+                            <p class="testimonial__description">Really impressed at how quickly you have managed to pull together a step-through experience...very pleased with the rapid progress and overall user experience improvements made!
+                            </p>
+                        </div>
+    
+                        <!--=============== TESTIMONIAL 3 ===============-->
+                        <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                    <!-- <img src="assets/img/testimonial3.jpg" alt="" class="testimonial__img">-->
+        
+                                    <div>
+                                        <h3 class="testimonial__name">Evan Lindauer</h3>
+                                        <span class="testimonial__client">Manager, Business Analysis</span>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div>
+                            </div>
+    
+                            <p class="testimonial__description">Emily takes service and initiative to a very high level... detailed and diligent... passionate...cares about her work and the people with whom she works...
+                            </p>
+                        </div>
+
+                    
+                        <!--=============== TESTIMONIAL 4 ===============-->
+                        <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                    <!-- <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__img">-->
+        
+                                    <div>
+                                        <h3 class="testimonial__name">Bryan Grubaugh</h3>
+                                        <span class="testimonial__client">Director of Digital Development</span>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div>
+                            </div>
+    
+                            <p class="testimonial__description">[Emily] has been instrumental in bringing a sense of organization to an especially chaotic project. Given the opportunity I would jump at the chance to have [Emily] on my team again.
+                            </p>
+                        </div>
+                        
+                        <!--=============== TESTIMONIAL 5 ===============-->
+                        <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                  <!--   <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__img">-->
+        
+                                    <div>
+                                        <h3 class="testimonial__name">Lance Jernigan</h3>
+                                        <span class="testimonial__client">Lead Frontend Developer</span>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div>
+                            </div>
+    
+                            <p class="testimonial__description">I was continuously impressed with the amount of focus and dedication [Emily] always brought to the team.
+                            </p>
+                        </div>
+                        
+                        <!--=============== TESTIMONIAL 6 ===============-->
+                        <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                   <!--  <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__img">-->
+        
+                                    <div>
+                                        <h3 class="testimonial__name">Robin Wilde</h3>
+                                        <span class="testimonial__client">Cybersecurity Program Manager</span>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div>
+                            </div>
+    
+                            <p class="testimonial__description">Emily is that rare someone who is equally comfortable and proficient at leading a team or being a lead contributor/team member...
+                            </p>
+                        </div>
+                        
+                        <!--=============== TESTIMONIAL 7 ===============-->
+                        <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                    <!-- <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__img">-->
+        
+                                    <div>
+                                        <h3 class="testimonial__name">Anita Lajuett</h3>
+                                        <span class="testimonial__client">Director of Master Data Management</span>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div>
+                            </div>
+    
+                            <p class="testimonial__description">[Emily’s] grit and determination [are] exceptional and timely. 
+                            </p>
+                        </div>
+                        
+                        <!--=============== TESTIMONIAL 8 ===============-->
+                        <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                    <!-- <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__img">-->
+        
+                                    <div>
+                                        <h3 class="testimonial__name">Greg Edwards</h3>
+                                        <span class="testimonial__client">Learning Management Specialist</span>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div>
+                            </div>
+    
+                            <p class="testimonial__description">[Emily] is technically knowledgeable, courteous, and always willing to think creatively to help solve problems.
+                            </p>
+                        </div>
+                        
+                        <!--=============== TESTIMONIAL 9 ===============-->
+                        <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                    <!-- <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__img">-->
+        
+                                    <div>
+                                        <h3 class="testimonial__name">Stacey Garrick</h3>
+                                        <span class="testimonial__client">Technical Writer & Content Specialist</span>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div>
+                            </div>
+    
+                            <p class="testimonial__description">I can count on [Emily] to make sure all members of the product team are kept informed of user needs and project changes.
+                            </p>
+                        </div>
+                        
+                        <!--=============== TESTIMONIAL 10 ===============-->
+                        <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                   <!--  <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__img">-->
+        
+                                    <div>
+                                        <h3 class="testimonial__name">Jim Pilgrim</h3>
+                                        <span class="testimonial__client">Full-Stack Developer</span>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div>
+                            </div>
+    
+                            <p class="testimonial__description">I’m impressed with [Emily’s] desire to learn new skills and her ability to communicate technical concepts to customers.
+                            </p>
+                        </div>
+                        
+                        <!--=============== TESTIMONIAL 11 ===============-->
+                        <div class="testimonial__content swiper-slide">
+                            <div class="testimonial__data">
+                                <div class="testimonial__header">
+                                   <!-- <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__img"> -->
+        
+                                    <div>
+                                        <h3 class="testimonial__name">Kristi Bopp Harper</h3>
+                                        <span class="testimonial__client">UX Leader</span>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                    <i class="uil uil-star testimonial__icon-star"></i>
+                                </div>
+                            </div>
+    
+                            <p class="testimonial__description">[Emily’s] communication skills are impeccable, and she understands how to cross-collaborate amongst colleagues in different regions effectively.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+
+                    <div class="swiper-pagination swiper-pagination-testimonial"></div>
+                </div>
             </section>
 
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact">
+                <h2 class="section__title">Contact me</h2>
+                <span class="section__subtitle">Get in touch</span>
+
+                <div class="contact__container container grid">
+                    <div>
+                    
+                        <div class="contact__information">
+                            <i class="uil uil-envelope contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">Email</h3>
+                                <span class="contact__subtitle">em@ilydesigns.com</span>
+                            </div>
+                        </div>
+                        
+                         <div class="contact__information">
+                            <i class="uil uil-phone contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">Find me on LinkedIn</h3>
+                                <span class="contact__subtitle">linkedin.com/in/eholcomb</span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-map-marker contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">Location</h3>
+                                <span class="contact__subtitle">Woodstock, GA (North Atlanta suburb)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form grid">
+                        <div class="contact__inputs grid">
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Name</label>
+                                <input type="text" class="contact__input">
+                            </div>
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Email</label>
+                                <input type="email" class="contact__input">
+                            </div>
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Project (if applicable)</label>
+                            <input type="text" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Message</label>
+                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        </div>
+                        
+                        <div>
+                            <a href="#" class="button button--flex">
+                                Send message
+                                <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
 
             </section>
         </main>
 
         <!--==================== FOOTER ====================-->
         <footer class="footer">
-         
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <h1 class="footer__title">Emily</h1>
+                        <span class="footer__subtitle">Digital product manager</span>
+                    </div>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#services" class="footer__link">About</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="footer__link">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="footer__link">Contact me</a>
+                        </li>
+                    </ul>
+
+                    <!--<div class="footer__socials">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                            <i class="uil uil-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social">
+                            <i class="uil uil-twitter-alt"></i>
+                        </a>
+                    </div>
+                    -->
+                </div>
+
+                <p class="footer__copy">&#169; Bedimcode & ilydesigns. All right reserved</p>
+            </div>
         </footer>
-        
-        <!--==================== SCROLL TOP ====================-->
-        
+
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrollup" id="scroll-top">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
 
         <!--==================== SWIPER JS ====================-->
-        <script src=""></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
 
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>
