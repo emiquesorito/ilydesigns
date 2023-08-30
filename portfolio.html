@@ -13,22 +13,25 @@
         <!--==================== CSS ==========-->
         <link rel="stylesheet" href="assets/css/styles.css">
 
+         <!--============ Blog CSS ========-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
         <title>Emily Holcomb Product | Strategy | UX | Analysis</title>
     </head>
     <body>
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="index.html#" class="nav__logo">Emily</a>
+                <a href="#" class="nav__logo">ily designs</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
                         <li class="nav__item">
-                            <a href="index.html#home" class="nav__link active-link">
-                                <i class="uil uil-estate nav__icon"></i> Home
+                            <a href="index.html" class="nav__link">
+                                <i class="uil uil-estate"></i>
                             </a>
                         </li>
-
+                        
                         <li class="nav__item">
                             <a href="index.html#about" class="nav__link">
                                 <i class="uil uil-smile-beam nav__icon"></i> About
@@ -36,25 +39,13 @@
                         </li>
 
                         <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-crosshair nav__icon"></i> Strategy
+                            <a href="#" class="nav__link active-link">
+                                <i class="uil uil-bag-alt nav__icon"></i> Portfolio
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#services" class="nav__link">
-                                <i class="uil uil-palette nav__icon"></i> UX
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class="uil uil-chart-pie nav__icon"></i> Analysis
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
+                            <a href="contact.html" class="nav__link">
                                 <i class="uil uil-at nav__icon"></i> Contact
                             </a>
                         </li>
@@ -76,209 +67,239 @@
         </header>
 
         <!--==================== MAIN ====================-->
-        <main class="main">
-      <div class="container">
 
-        <!--
-          - BLOG SECTION
-        -->
+        <main>
+            
+            <div class="main about section">
 
-        <div class="blog">
+            <div class="portfolio__cards-container">
 
-          <h2 class="section__title">Case studies</h2>
-          <span class="section__subtitle">With 8+ years managing all aspects of digital product development, I have a long track record of executing on strategic vision work, analyzing solutions and process, and enhancing user satisfaction through seamless digital experiences. I am proficient in JIRA, Confluence, Figma, and more. I drive innovative, user-centric outcomes.</span>
+                <!--
+                - BLOG SECTION
+                -->
 
-          <div class="blog-card-group">
+                <div class="blog">
 
-        
-            <div class="blog-card">
+                <h1 class="h1">Case studies</h1>
+                <span class="p">With 8+ years managing all aspects of digital product development, I have a long track record of executing on strategic vision work, analyzing solutions and process, and enhancing user satisfaction through seamless digital experiences. I am proficient in JIRA, Confluence, Figma, and more. I drive innovative, user-centric outcomes.</span>
 
-              <div class="blog-card-banner">
-                <img src="./assets/images/blogimg.png" alt="Project title"
-                  width="250" class="blog-banner-img">
-              </div>
+                <div class="blog-card-group">
 
-              <div class="blog-content-wrapper">
+                    <a href="mastering-enterprise-stakeholders.html" class="blog-card-link">
+                        <div class="blog-card" data-topic="StrategicExecution">
+                            <div class="blog-card-flex-container">
+                                <div class="blog-card-banner">
+                                    <img src="/assets/images/project1.jpg" alt="Mastering enterprise stakeholder management" class="blog-banner-img">
+                                </div>
+                                
+                                <div class="blog-content-wrapper">
+                                    <div class="blog-topic text-tiny">Strategy</div>
+                                    <h3 class="h3">
+                                        Mastering enterprise stakeholder management
+                                    </h3>
+                                    <p class="blog-text">
+                                        Navigating complexities and delivering results to effectively manage stakeholders at Pilot Company
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    <a href="revitalizing-kiosk-ux.jpg" class="blog-card-link">
+                        <div class="blog-card" data-topic="UserExperience">
+                            <div class="blog-card-flex-container">
+                                <div class="blog-card-banner">
+                                    <img src="/assets/images/project-2.jpg" alt="Revitalizing kiosk user experiences" class="blog-banner-img">
+                                </div>
+                                
+                                <div class="blog-content-wrapper">
+                                    <div class="blog-topic text-tiny">UX</div>
+                                    <h3 class="h3">
+                                        Revitalizing kiosk user experiences
+                                    </h3>
+                                    <p class="blog-text">
+                                        User testing, prototyping, design assets, data mapping, and more to support non-responsive web-based kiosks for various commerce UIs
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                                       
 
-                <button class="blog-topic text-tiny">Topic</button>
+                    <a href="out-of-the-page.html" class="blog-card-link">
+                        <div class="blog-card" data-topic="BusinessAnalysis">
+                            <div class="blog-card-flex-container">
+                                <div class="blog-card-banner">
+                                    <img src="/assets/images/project3.jpg" alt="Out of the page and on to the screen" class="blog-banner-img">
+                                </div>
+                                
+                                <div class="blog-content-wrapper">
+                                    <div class="blog-topic text-tiny">Analysis</div>
+                                    <h3 class="h3">
+                                        Out of the page and on to the screen
+                                    </h3>
+                                    <p class="blog-text">
+                                        Evaluating Regal and Cineworld's booking workflow, from user journey mapping to user acceptance testing
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>                    
 
-                <h3>
-                  <a href="#" class="h3">Project title
-                  </a>
-                </h3>
-
-                <p class="blog-text">
-                    Project description
-                </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="blog-card">
-
-              <div class="blog-card-banner">
-                <img src="./assets/images/blog-1.png" alt="Mastering enterprise stakeholder management at Pilot Company"
-                  width="250" class="blog-banner-img">
-              </div>
-
-              <div class="blog-content-wrapper">
-
-                <button class="blog-topic text-tiny">Strategy</button>
-
-                <h3>
-                  <a href="#" class="h3">Mastering enterprise stakeholder management
-                  </a>
-                </h3>
-
-                <p class="blog-text">
-                    Navigating complexities and delivering results to effectively mange stakeholders at Pilot Company.
-                </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="blog-card">
-
-              <div class="blog-card-banner">
-                <img src="./assets/images/blog-2.png" alt="Revitalizing user experiences" width="250"
-                  class="blog-banner-img">
-              </div>
-
-              <div class="blog-content-wrapper">
-
-                <button class="blog-topic text-tiny">UX</button>
-
-                <h3><a href="" class="h3">Revitalizing user experiences</a></h3>
-
-                <p class="blog-text">
-                  Learnings from the various redesign projects I've managed 
-                </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="blog-card">
-
-              <div class="blog-card-banner">
-                <img src="./assets/images/blog-3.png" alt="Accessibility Tips for Web Developers" width="250"
-                  class="blog-banner-img">
-              </div>
-
-              <div class="blog-content-wrapper">
-
-                <button class="blog-topic text-tiny">Analysis</button>
-
-                <h3><a href="" class="h3">Out of the page and on to the screen</a></h3>
-
-                <p class="blog-text">
-                  Exploring the analysis of Regal and Cineworld's user journeys through the booking workflow  
-                </p>
+                    <a href="#" class="blog-card-link">
+                        <div class="blog-card" data-topic="UserExperience">
+                            <div class="blog-card-flex-container">
+                                <div class="blog-card-banner">
+                                    <img src="/assets/images/project-1.jpeg" alt="Mastering enterprise stakeholder management" class="blog-banner-img">
+                                </div>
+                                
+                                <div class="blog-content-wrapper">
+                                    <div class="blog-topic text-tiny">Strategy</div>
+                                    <h3 class="h3">
+                                        Mastering enterprise stakeholder management
+                                    </h3>
+                                    <p class="blog-text">
+                                        Navigating complexities and delivering results to effectively manage stakeholders at Pilot Company.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>  
+                    
 
                 </div>
 
-              </div>
+                </div>
+
+
+
+
+
+                <!--
+                - ASIDE
+                -->
+
+                <div class="aside">
+
+                <div class="topics">
+
+                    <h2 class="h3">Topics</h2>
+
+                    <div class="topic-filters">
+                        <div id="strategyFilterBtn" data-filter="StrategicExecution" class="topic-btn inactive">
+                            <div class="icon-box">
+                                <i class="uil uil-crosshair" role="img" class="md hydrated" aria-label="strategy target in cross-hairs"></i>
+                            </div>
+                            <p>Strategic execution</p>
+                            <div class="remove-filter">
+                                <i class="uil uil-times-circle" role="img" class="md hydrated" aria-label="remove filter"></i>
+                            </div>
+                        </div>
+
+                        <div id="uxFilterBtn" data-filter="UserExperience" class="topic-btn inactive">
+                            <div class="icon-box">
+                                <i class="uil uil-palette" role="img" class="md hydrated" aria-label="UX color palette"></i>
+                            </div>
+                            <p>User experience</p>
+                            <div class="remove-filter">
+                                <i class="uil uil-times-circle" role="img" class="md hydrated" aria-label="remove filter"></i>
+                            </div>
+                        </div>
+
+                        <div id="analysisFilterBtn" data-filter="BusinessAnalysis" class="topic-btn inactive">
+                            <div class="icon-box">
+                                <i class="uil uil-chart-pie" role="img" class="md hydrated" aria-label="analysis pie chart"></i>
+                            </div>
+                            <p>Business analysis</p>
+                            <div class="remove-filter">
+                                <i class="uil uil-times-circle" role="img" class="md hydrated" aria-label="remove filter"></i>
+                            </div>
+                        </div>
+
+                        <div id="stakeholdersFilterBtn" data-filter="StakeholderMgmt" class="topic-btn inactive">
+                            <div class="icon-box">
+                                <i class="uil uil-users-alt" role="img" class="md hydrated" aria-label="users"></i>
+                            </div>
+                            <p>Stakeholder management</p>
+                            <div class="remove-filter">
+                                <i class="uil uil-times-circle" role="img" class="md hydrated" aria-label="remove filter"></i>
+                            </div>
+                        </div>
+
+                        <div id="a11yFilterBtn" data-filter="A11y" class="topic-btn inactive">
+                            <div class="icon-box">
+                                <i class="uil uil-accessible-icon-alt" role="img" class="md hydrated" aria-label="accessibility icon"></i>
+                            </div>
+                            <p>Accessibility</p>
+                            <div class="remove-filter">
+                                <i class="uil uil-times-circle" role="img" class="md hydrated" aria-label="remove filter"></i>
+                            </div>
+                        </div>
+
+                        <div id="roadmapFilterBtn" data-filter="Roadmap" class="topic-btn inactive">
+                            <div class="icon-box">
+                                <i class="uil uil-map" role="img" class="md hydrated" aria-label="map icon"></i>
+                            </div>
+                            <p>Roadmap</p>
+                            <div class="remove-filter">
+                                <i class="uil uil-times-circle" role="img" class="md hydrated" aria-label="remove filter"></i>
+                            </div>
+                        </div>
+
+                        <div id="workflowsFilterBtn" data-filter="Workflows" class="topic-btn inactive">
+                            <div class="icon-box">
+                                <i class="uil uil-process" role="img" class="md hydrated" aria-label="process icon"></i>
+                            </div>
+                            <p>Workflows</p>
+                            <div class="remove-filter">
+                                <i class="uil uil-times-circle" role="img" class="md hydrated" aria-label="remove filter"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--<div class="tags">
+
+                    <h2 class="h2">Tags</h2>
+
+                    <div class="wrapper">
+
+                    <button class="hashtag">#mongodb</button>
+                    <button class="hashtag">#nodejs</button>
+                    <button class="hashtag">#a11y</button>
+                    <button class="hashtag">#mobility</button>
+                    <button class="hashtag">#inclusion</button>
+                    <button class="hashtag">#webperf</button>
+                    <button class="hashtag">#optimize</button>
+                    <button class="hashtag">#performance</button>
+
+                    </div>
+
+                </div>-->
+
+                <div class="contact">
+
+                    <h2 class="h2">Get in touch</h2>
+
+                    <div class="wrapper">
+
+                    <p>
+                        My insights can elevate your company's digital footprint. Want to learn more?
+                    </p>
+
+                    <a href="index.html#contact" class="button--small button--flex contactme-btn">
+                        Contact me <i class="uil uil-message button__icon"></i>
+                    </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
-        </div>
-
-
-
-
-
-        <!--
-          - ASIDE
-        -->
-
-        <div class="aside">
-
-          <div class="topics">
-
-            <h2 class="section__title">Topics</h2>
-
-            <a href="#" class="topic-btn">
-              <div class="icon-box">
-                <i class="uil uil-crosshair nav__icon"></i>
-              </div>
-
-              <p>Strategy</p>
-            </a>
-
-            <a href="#" class="topic-btn">
-              <div class="icon-box">
-                <i class="uil uil-palette nav__icon"></i>
-              </div>
-
-              <p>UX</p>
-            </a>
-
-            <a href="#" class="topic-btn">
-              <div class="icon-box">
-                <i class="uil uil-chart-pie nav__icon"></i>
-              </div>
-
-              <p>Analysis</p>
-            </a>
-
-          </div>
-
-          <div class="tags">
-
-            <h2 class="section__title">Tags</h2>
-
-            <div class="wrapper">
-
-              <button class="hashtag">#stakeholders</button>
-              <button class="hashtag">#a11y</button>
-              <button class="hashtag">#requirements</button>
-              <button class="hashtag">#users</button>
-              <button class="hashtag">#teammgmt</button>
-              <button class="hashtag">#design</button>
-              <button class="hashtag">#roadmap</button>
-              <button class="hashtag">#usertesting</button>
-              <button class="hashtag">#workflows</button>
-              <button class="hashtag">#processes</button>
-
-            </div>
-
-          </div>
-
-          <div class="contact">
-
-            <h2 class="section__title">Let's Talk</h2>
-
-            <div class="wrapper">
-
-              <p>
-                My insights can elevate your company's digital footprint. Want to learn more?
-              </p>
-
-              <a href="index.html#contact" class="button button--flex">
-                Get in touch <i class="uil uil-message button__icon"></i>
-            </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </main>
+        </main>
 
 
 

@@ -190,3 +190,38 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+
+/document.addEventListener("DOMContentLoaded", function() {
+  const filterBtns = document.querySelectorAll(".topic-btn");
+  const blogCards = document.querySelectorAll(".blog-card");
+
+  filterBtns.forEach(filterBtn => {
+    filterBtn.addEventListener("click", function() {
+      const filterType = filterBtn.getAttribute("data-filter");
+
+      // Toggle the active class
+      this.classList.toggle('active');
+
+      if (filterBtn.classList.contains("inactive")) {
+        // Activate filter
+        filterBtn.classList.remove("inactive");
+
+        blogCards.forEach(card => {
+          const topic = card.querySelector(".blog-topic").textContent;
+          if (topic !== filterType) {
+            card.classList.add("hidden");
+          }
+        });
+      } else {
+        // Deactivate filter
+        filterBtn.classList.add("inactive");
+
+        blogCards.forEach(card => {
+          card.classList.remove("hidden");
+        });
+      }
+    });
+  });
+});
