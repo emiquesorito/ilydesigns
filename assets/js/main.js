@@ -1,3 +1,5 @@
+/*window.location.replace("https://ilydesigns.com");*/
+
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
@@ -94,8 +96,9 @@ modalCloses.forEach((modalClose) => {
 
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiperPortfolio = new Swiper('.portfolio__container', {
-    cssMode: true,
+    /*cssMode: true,*/
     loop: true,
+    grabCursor: true,
 
     navigation: {
       nextEl: '.swiper-button-next',
@@ -192,6 +195,7 @@ themeButton.addEventListener('click', () => {
 })
 
 
+// Filter blog cards
 
 /document.addEventListener("DOMContentLoaded", function() {
   const filterBtns = document.querySelectorAll(".topic-btn");
@@ -224,4 +228,16 @@ themeButton.addEventListener('click', () => {
       }
     });
   });
+
+
+// New code to read query parameter and activate filter
+  const urlParams = new URLSearchParams(window.location.search);
+  const filterType = urlParams.get('filter');
+
+  if (filterType) {
+    const filterBtn = document.querySelector(`[data-filter="${filterType}"]`);
+    if (filterBtn) {
+      filterBtn.click();  // Programmatically click the button to activate the filter
+    }
+  }
 });
