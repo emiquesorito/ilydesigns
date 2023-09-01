@@ -120,7 +120,7 @@ ul {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: always;
 }
 
 img {
@@ -1535,6 +1535,9 @@ body.dark-theme .blog-topic {
   transform: translateX(0.25rem);
 }
 
+.footer-link {
+  color: hsl(var(--hue-color), 8%, 95%);
+}
 
 
 
