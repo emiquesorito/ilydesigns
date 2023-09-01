@@ -241,3 +241,22 @@ themeButton.addEventListener('click', () => {
     }
   }
 });
+
+
+/// CONTACT ME FORM ///
+
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("contact-form");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Collect form data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const project = document.getElementById("project").value;
+    const message = document.getElementById("message").value;
+
+    // TODO: Send this data to your server-side function
+    console.log("Form submitted:", { name, email, project, message });
+  });
+});

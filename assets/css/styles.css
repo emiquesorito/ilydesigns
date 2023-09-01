@@ -1513,3 +1513,28 @@ body.dark-theme .blog-topic {
   }
 }
 
+.ilyd-submit-button {
+  background-color: var(--first-color);
+  color: #FFF;
+  padding: 1rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  box-shadow: none;
+}
+
+.ilyd-submit-button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.ilyd-submit-button:hover .button__icon {
+  transform: translateX(0.25rem);
+}
+
+
+
+
