@@ -121,6 +121,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--text-color-lighter)
 }
 
 img {
@@ -1608,4 +1609,14 @@ body.dark-theme .blog-topic {
   object-fit: cover;
   border-radius: .5rem;
   justify-self: center;
+}
+
+
+/*========= 404 =======*/
+.fourohfour__icon {
+  font-size: 5rem;
+}
+
+.fourohfour__section {
+  padding: 4rem;
 }
