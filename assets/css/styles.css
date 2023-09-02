@@ -120,7 +120,7 @@ ul {
 }
 
 a {
-  text-decoration: always;
+  text-decoration: none;
 }
 
 img {
@@ -788,12 +788,18 @@ img {
 
 .swiper-pagination-bullet-active {
   background-color: var(--first-color);
+  outline: solid var();
 }
 
 .swiper-button-prev,
 .swiper-button-next,
 .swiper-pagination-bullet {
-  outline: none;
+  outline: solid var(--first-color);
+  background-color: var(--container-color);
+}
+
+.swiper-home {
+  margin-bottom: 3rem;
 }
 
 /*==================== PROJECT IN MIND ====================*/
@@ -848,7 +854,7 @@ img {
 
 .testimonial__client {
   font-size: var(--small-font-size);
-  color: var(--text-color-light);
+  color: var(--text-color-lighter);
 }
 
 .testimonial__description {
@@ -935,7 +941,7 @@ img {
 }
 
 .footer__links {
-  display: flex;
+  display: grid;
   flex-direction: column;
   row-gap: 1.5rem;
 }
@@ -1251,6 +1257,7 @@ img {
   }
   .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
     bottom: 0;
+    font-size:medium; 
   }
   .testimonial__description {
     margin-bottom: 4rem;
@@ -1537,7 +1544,16 @@ body.dark-theme .blog-topic {
 
 .footer-link {
   color: hsl(var(--hue-color), 8%, 95%);
+  padding-top: 3.5rem;
 }
 
-
+.foother-home__content {
+  grid-template-columns: .5fr 3fr;
+  padding-top: 3.5rem;
+  align-items: center;
+}
+.foother-home__container {
+  margin: 5rem;
+  align-items: center;
+}
 
