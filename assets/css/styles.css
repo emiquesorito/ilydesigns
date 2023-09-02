@@ -1304,7 +1304,7 @@ img {
 }
 
 .topic-btn p {
-    padding: 0px 0px 0px 10px;
+    padding: 0px 10px 0px 10px;
     font-weight: 400;
     font-size: var(--smaller-font-size);
 }
