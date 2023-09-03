@@ -1437,9 +1437,9 @@ body.dark-theme .swiper-pagination-bullet-active {
     margin-right: 20px; /* Add right margin to create space */
 }
 
-.blog-content-wrapper {
-    padding: 20px; /* Add padding inside the content wrapper */
- }
+/*.blog-content-wrapper {
+    padding: 20px; /* Add padding inside the content wrapper
+ }  */
 
 
 /* Desktop and Tablet */
@@ -1456,6 +1456,10 @@ body.dark-theme .swiper-pagination-bullet-active {
     .blog-content-wrapper {
         flex: 2; /* Take up the remaining space */
     }
+
+    .blog-content-wrapper {
+      padding: 20px; /* Add padding inside the content wrapper */
+   }
 }
 
 .p {
@@ -1625,13 +1629,18 @@ body.dark-theme .blog-topic {
   
 }
 
-/*========= 404 =======*/
+/*========= info-pages =======*/
 .fourohfour__icon {
   font-size: 5rem;
 }
 
 .fourohfour__section {
   padding: 4rem;
+}
+
+.info-pages {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 /*==== Resume viewer */
