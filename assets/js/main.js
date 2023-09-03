@@ -200,6 +200,7 @@ themeButton.addEventListener('click', () => {
 document.addEventListener("DOMContentLoaded", function() {
   const filterBtns = document.querySelectorAll(".topic-btn");
   const blogCards = document.querySelectorAll(".blog-card");
+  const viewAllBtn = document.getElementById("viewAllBtn"); // "All" button
 
   // New code to read query parameter and activate filter
   const urlParams = new URLSearchParams(window.location.search);
@@ -208,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (filterTypeFromURL) {
     const filterBtn = document.querySelector(`[data-filter="${filterTypeFromURL}"]`);
     if (filterBtn) {
-      filterBtn.click();  // Programmatically click the button to activate the filter
+      filterBtn.click();
     }
   }
 
@@ -219,36 +220,70 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // Existing click event logic
+  // Modified click event logic for topic filters
   filterBtns.forEach(filterBtn => {
     filterBtn.addEventListener("click", function() {
-      const filterType = filterBtn.getAttribute("data-filter");
+      const filterType = this.getAttribute("data-filter");
 
-      // Toggle the active class
-      this.classList.toggle('active');
+      if (this.classList.contains('active')) {
+        // Deactivate filter
+        this.classList.remove('active');
+        this.classList.add('inactive');
+        this.style.backgroundColor = 'var(--input-color)'; // Reset to original color
 
-      if (filterBtn.classList.contains("inactive")) {
+        viewAllBtn.classList.add('active');  // Make the "All" button look active
+        viewAllBtn.style.backgroundColor = 'var(--scroll-bar-color)'; // Set background color for "All" button
+
+        blogCards.forEach(card => {
+          card.classList.remove("hidden");
+        });
+      } else {
+        // Remove 'active' class from all buttons and "All" button
+        filterBtns.forEach(btn => {
+          btn.classList.remove('active');
+          btn.classList.add('inactive');
+          btn.style.backgroundColor = 'var(--input-color)'; // Reset to original color
+        });
+
+        viewAllBtn.classList.remove('active'); // Make the "All" button look inactive
+        viewAllBtn.style.backgroundColor = 'var(--input-color)'; // Reset background color for "All" button
+
         // Activate filter
-        filterBtn.classList.remove("inactive");
+        this.classList.add('active');
+        this.classList.remove('inactive');
+        this.style.backgroundColor = 'var(--scroll-bar-color)'; // Set active color
 
         blogCards.forEach(card => {
           const topic = card.querySelector(".blog-topic").textContent;
           if (topic !== filterType) {
             card.classList.add("hidden");
+          } else {
+            card.classList.remove("hidden");
           }
-        });
-      } else {
-        // Deactivate filter
-        filterBtn.classList.add("inactive");
-        filterBtn.style.backgroundColor = 'var(--input-color)';
-
-        blogCards.forEach(card => {
-          card.classList.remove("hidden");
         });
       }
     });
   });
+
+  // New code for "View All" button
+  viewAllBtn.addEventListener("click", function() {
+    filterBtns.forEach(btn => {
+      btn.classList.remove('active');
+      btn.classList.add('inactive');
+      btn.style.backgroundColor = 'var(--input-color)'; // Reset to original color
+    });
+    this.classList.add('active'); // Make the "All" button look active
+    this.style.backgroundColor = 'var(--scroll-bar-color)'; // Set background color for "All" button
+
+    blogCards.forEach(card => {
+      card.classList.remove("hidden");
+    });
+  });
 });
+
+
+
+
 
 
 
