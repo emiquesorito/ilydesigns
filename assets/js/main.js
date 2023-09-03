@@ -194,30 +194,8 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-// Function to toggle between light and dark mode based on system settings
-function autoToggleMode() {
-  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  // Apply initial preference
-  document.body.classList[prefersDarkMode ? 'add' : 'remove']('dark-theme');
-  themeButton.classList[prefersDarkMode ? 'add' : 'remove']('uil-sun');
-
-  // Update local storage
-  localStorage.setItem('selected-theme', prefersDarkMode ? 'dark' : 'light');
-  localStorage.setItem('selected-icon', prefersDarkMode ? 'uil-moon' : 'uil-sun');
-}
-
-// Detecting system's initial preference and set it
-autoToggleMode();
-
-// Listening for changes in the preference
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-  autoToggleMode();
-});
-
-
-
-// Filter blog cards
+//============ Filter blog cards ====================*/
 
 /document.addEventListener("DOMContentLoaded", function() {
   const filterBtns = document.querySelectorAll(".topic-btn");
@@ -229,6 +207,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (ev
 
       // Toggle the active class
       this.classList.toggle('active');
+
+      // Force reflow
+      void filterBtn.offsetHeight;
 
       if (filterBtn.classList.contains("inactive")) {
         // Activate filter
@@ -243,6 +224,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (ev
       } else {
         // Deactivate filter
         filterBtn.classList.add("inactive");
+        filterBtn.style.backgroundColor = 'var(--input-color)';
+
 
         blogCards.forEach(card => {
           card.classList.remove("hidden");
@@ -284,3 +267,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+//// PDF Viewer ////
