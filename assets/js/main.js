@@ -197,19 +197,35 @@ themeButton.addEventListener('click', () => {
 
 //============ Filter blog cards ====================*/
 
-/document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   const filterBtns = document.querySelectorAll(".topic-btn");
   const blogCards = document.querySelectorAll(".blog-card");
 
+  // New code to read query parameter and activate filter
+  const urlParams = new URLSearchParams(window.location.search);
+  const filterTypeFromURL = urlParams.get('filter');
+
+  if (filterTypeFromURL) {
+    const filterBtn = document.querySelector(`[data-filter="${filterTypeFromURL}"]`);
+    if (filterBtn) {
+      filterBtn.click();  // Programmatically click the button to activate the filter
+    }
+  }
+
+  // Initialize buttons to be 'inactive' if they are not 'active'
+  filterBtns.forEach(filterBtn => {
+    if (!filterBtn.classList.contains('active')) {
+      filterBtn.classList.add('inactive');
+    }
+  });
+
+  // Existing click event logic
   filterBtns.forEach(filterBtn => {
     filterBtn.addEventListener("click", function() {
       const filterType = filterBtn.getAttribute("data-filter");
 
       // Toggle the active class
       this.classList.toggle('active');
-
-      // Force reflow
-      void filterBtn.offsetHeight;
 
       if (filterBtn.classList.contains("inactive")) {
         // Activate filter
@@ -226,26 +242,14 @@ themeButton.addEventListener('click', () => {
         filterBtn.classList.add("inactive");
         filterBtn.style.backgroundColor = 'var(--input-color)';
 
-
         blogCards.forEach(card => {
           card.classList.remove("hidden");
         });
       }
     });
   });
-
-
-// New code to read query parameter and activate filter
-  const urlParams = new URLSearchParams(window.location.search);
-  const filterType = urlParams.get('filter');
-
-  if (filterType) {
-    const filterBtn = document.querySelector(`[data-filter="${filterType}"]`);
-    if (filterBtn) {
-      filterBtn.click();  // Programmatically click the button to activate the filter
-    }
-  }
 });
+
 
 
 /// CONTACT ME FORM ///
