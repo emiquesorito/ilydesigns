@@ -26,20 +26,40 @@
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="pdf-viewer-nav container">
-                <a href="index.html" class="nav__link active-link">
-                    <i class="uil uil-smile-beam nav__icon"></i> Exit Resume Viewer
-                </a>
+                    <button class="pdf-pagination-button" id="prevPage">
+                        <i class="uil uil-previous button__icon"></i>
+                        Previous Page
+                    </button>
+
+                    <a href="index.html" style="text-decoration: underline;" class="exit__link active-link">
+                        Exit Resume Viewer
+                    </a>
+
+                    <button class="pdf-pagination-button" id="nextPage">
+                        Next Page
+                        <i class="uil uil-step-forward button__icon"></i>
+                    </button>
             </nav>
         </header>
 
         <!--==================== MAIN ====================-->
-        <main class="main">
-        <body>
-          <div id="pdfContainer">
-            <!-- PDF content will be displayed here -->
-          </div>
-          <button id="prevPage">Previous Page</button>
-          <button id="nextPage">Next Page</button>
-          <script src="viewer.js"></script>
-      </body>
+        
+        <main class="resume-viewer"></main>
+            <div id="pdfContainer" class="pdf-container">
+                <!-- PDF content will be displayed here -->
+            </div>
+
+            <!--==================== MAIN JS ====================-->
+            <script src="assets/js/viewer.js"></script>
+        </main>
+    </body>
+    
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrollup" id="scroll-top">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+    <a download="" href="assets/pdf/Emily Holcomb Resume 2023.pdf" class="scrollup">
+        Download resume <i class="uil uil-download-alt button__icon"></i>
+    </a>
+        
 </html>
