@@ -1623,7 +1623,7 @@ body.dark-theme .blog-topic {
     object-fit: cover;
   }
 
-  .hportfolio__img-container {
+  .portfolio__img-container {
     
   }
   
@@ -1772,4 +1772,5 @@ body.dark-theme .blog-topic {
   text-align: left;
   margin: 0.5rem;
 }
+
 

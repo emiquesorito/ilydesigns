@@ -306,4 +306,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-//// PDF Viewer ////
+//// table sort ////
+
+$(document).ready(function() { 
+  $(".sortable").tablesorter(); 
+});
+
+
+
