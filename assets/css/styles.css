@@ -876,14 +876,14 @@ body.dark-theme .swiper-pagination-bullet-active {
 }
 
 /*==================== CONTACT ME ====================*/
-.contact__container {
+/*==.contact__container {
   row-gap: 3rem;
 }
 
 .contact__information {
   display: flex;
   margin-bottom: var(--mb-2);
-}
+}=*/
 
 .contact__icon {
   font-size: 2rem;
@@ -1773,4 +1773,31 @@ body.dark-theme .blog-topic {
   margin: 0.5rem;
 }
 
+/* Contact container styling for desktop and tablet */
+@media screen and (min-width: 568px) {
+  .contact__container {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 0; /* Override the existing row-gap */
+  }
+
+  .contact__information {
+      flex: 1; /* Each contact information block takes equal space */
+      padding: 0 10px; /* Adjust padding as needed */
+      margin-bottom: 0; /* Override the existing margin-bottom */
+  }
+}
+
+/* Contact container default styling for mobile */
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem; /* Keep the original gap for mobile */
+}
+
+.contact__information {
+  margin-bottom: var(--mb-2); /* Keep the original margin for mobile */
+}
 
